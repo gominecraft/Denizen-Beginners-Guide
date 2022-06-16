@@ -294,9 +294,24 @@ One of the many useful tools in a resource pack is custom fonts! This allows at 
 
 Simple!
 
-Step 1: In your resource pack, make sure you have a pack-specific folder. Many other features expect you to override the `minecraft` folder, but this one allows you to just make your own. So instead of `assets/minecraft/font`, you'll have `assets/examplepack/font` (but replace `examplepack` with the name of your pack... or any simple identifier you prefer).
-Step 2: inside `assets/examplepack/font`, create a file named something like `examplefont.json` (but again, name it whatever you want to identify it - say `gui.json` or `particles.json` or something).
-Step 3: inside that json file, add the following:
+Notes for the following section:
+* examplepack, samplefolder and sampleimage are placeholders.
+* Files and folder names should be kept simple and short. You **must** only use alpha-numeric **and** all lowercase.
+* It's important to make sure the names in the JSON file content are the same as the real file paths.
+
+If you need images to test with, here's a pair of valid images you can use: [sampleimage.png](https://github.com/DenizenScript/Denizen-Beginners-Guide/raw/master/source/guides/non-denizen/images/denizen_pack_image.png), [sampleimage2.png](https://github.com/DenizenScript/Denizen-Beginners-Guide/raw/master/source/guides/non-denizen/images/denizen_pack_image2.png)
+
+Keeping in mind the notes above, follow the steps below:
+
+In your resource pack, make sure you have a pack-specific folder. Many other features expect you to override the `minecraft` folder, this one allows you to just make your own. 
+
+The process:
+
+1. Create the following path: `assets/examplepack/font`
+2. Inside `assets/examplepack/font`, create a file relevant to the font.
+  * Example: `gui.json` 
+3. Inside that json file, add the following sample:
+
 ```json
 {
   "providers": [
@@ -321,19 +336,10 @@ Step 3: inside that json file, add the following:
   ]
 }
 ```
-Note the usage of `samplefolder` and `sampleimage` as again spots to fill in your own names.
 
-Step 4: in `assets/examplepack/textures/samplefolder/`, add `sampleimage.png` as any valid image of any valid size (8x8, 32x32, 128x128, etc.)
-
-These folder and file names can be anything, as long as they are: ASCII (a-z, 0-9), all lower case, and short/simple. Basically, don't tempt fate of bugs by using complicated or messy names.
-
-It's important to make sure the names in the JSON file content are the same as the real file paths.
-
-If you need images to test with, here's a pair of valid images you can use: [sampleimage.png](https://github.com/DenizenScript/Denizen-Beginners-Guide/raw/master/source/guides/non-denizen/images/denizen_pack_image.png), [sampleimage2.png](https://github.com/DenizenScript/Denizen-Beginners-Guide/raw/master/source/guides/non-denizen/images/denizen_pack_image2.png)
-
-Step 5: Load up your pack in-game.
-
-Step 6: In-game, try `/ex narrate <&font[examplepack:examplefont]>ab`
+4. In `assets/examplepack/textures/samplefolder/`, add `sampleimage.png` as any valid image of a valid size (8x8, 32x32, 128x128, etc.)
+5. Load up your pack in-game.
+6. In-game, try `/ex narrate <&font[examplepack:examplefont]>ab`
 
 Notice how `examplepack` (the folder name) is used, and `examplefont` (the json file name) is used. Replace these with the names you chose yourself for the files.
 
