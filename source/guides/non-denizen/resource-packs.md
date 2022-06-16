@@ -294,7 +294,7 @@ One of the many useful tools in a resource pack is custom fonts! This allows at 
 
 Simple!
 
-Notes for the following section:
+**Firstly, some notes for the following section:**
 * examplepack, samplefolder and sampleimage are placeholders.
 * Files and folder names should be kept simple and short. You **must** only use alpha-numeric **and** all lowercase.
 * It's important to make sure the names in the JSON file content are the same as the real file paths.
@@ -307,10 +307,9 @@ In your resource pack, make sure you have a pack-specific folder. Many other fea
 
 The process:
 
-1. Create the following path: `assets/examplepack/font`
-2. Inside `assets/examplepack/font`, create a file relevant to the font.
-  * Example: `gui.json` 
-3. Inside that json file, add the following sample:
+* Create the following path: `assets/examplepack/font`.
+* Inside `assets/examplepack/font`, create a file relevant to the font. Ex: `gui.json`.
+* Inside that json file, add the following sample:
 
 ```json
 {
@@ -337,11 +336,9 @@ The process:
 }
 ```
 
-4. In `assets/examplepack/textures/samplefolder/`, add `sampleimage.png` as any valid image of a valid size (8x8, 32x32, 128x128, etc.)
-5. Load up your pack in-game.
-6. In-game, try `/ex narrate <&font[examplepack:examplefont]>ab`
-
-Notice how `examplepack` (the folder name) is used, and `examplefont` (the json file name) is used. Replace these with the names you chose yourself for the files.
+* In `assets/examplepack/textures/samplefolder/`, add `sampleimage.png` as any valid image of a valid size (8x8, 32x32, 128x128, etc).
+* Load up your pack in-game.
+* In-game, try `/ex narrate <&font[examplepack:examplefont]>ab`.
 
 Notice also that the text `ab` corresponds to the `"a"` and `"b"` lines in the JSON.
 
